@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Aplicación de Datos del Clima
 
-First, run the development server:
+Una aplicación que proporciona información meteorológica detallada para la región de Argentina, diseñada para ser precisa y fácil de usar. Construida con tecnologías modernas para garantizar una experiencia fluida y atractiva.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Características
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Datos meteorológicos en tiempo real:**
+  - Condiciones actuales como temperatura, humedad y velocidad del viento.
+  - Pronóstico extendido para varios días.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Funcionalidades específicas:**
+  - Búsqueda de ciudades dentro de Argentina.
+  - Mapas interactivos de clima.
+  - Alertas meteorológicas personalizadas.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Comenzar
 
-## Learn More
+1. Instalar dependencias:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Ejecutar el servidor de desarrollo:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+3. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Stack Tecnológico
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Radix UI
+- clsx para manejo dinámico de clases
+- tailwind-merge para utilidades de diseño
+- Integración con APIs externas para datos meteorológicos
+
+## Estructura del Proyecto
+
+- `/components` - Componentes reutilizables de React.
+- `/lib` - Funciones de utilidad e integración con APIs.
+- `/types` - Definiciones de tipos en TypeScript.
+- `/app` - Páginas del router de Next.js.
+
+## Capturas de pantalla
+
+### Vista principal
+
+![Vista principal](/public/vista-principal-clima.png)
+
+### Pronóstico por ciudad
+
+![Pronóstico](/public/pronostico-ciudad.png)
