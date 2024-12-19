@@ -13,7 +13,7 @@ import {
   SelectLabel,
   SelectItem,
 } from "@/components/ui/select";
-import { Cloud, Droplet, Thermometer, Wind } from "lucide-react";
+import { Cloud, Droplet, Link, Thermometer, Wind } from "lucide-react";
 
 interface WeatherData {
   temperature: number;
@@ -171,7 +171,7 @@ const Weather: React.FC = () => {
         setTemperatureHistory(data.map((d) => d[metric]));
         setTimeLabels(data.map((d) => d.time));
       } catch (err) {
-        setError("Error fetching weather data");
+        setError("Error al intentar obtener datos meteorológicos");
       } finally {
         setLoading(false);
       }
@@ -184,7 +184,10 @@ const Weather: React.FC = () => {
   }, [province, metric]);
 
   if (loading) return <CircularProgress />;
-  if (error) return <div className="text-red-500">{error}</div>;
+  if (error) return <div className="flex flex-col text-red-400 text-3xl font-light">
+    {error}
+    <a href="/" className="border px-4 py-2 rounded-[4px] text-white text-xl bg-slate-900 hover:bg-slate-800  m-auto mt-10">Volver a la App</a>
+  </div>;
 
   // Datos para el gráfico
   const chartData = timeLabels.map((time, index) => ({
